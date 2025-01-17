@@ -1,7 +1,9 @@
 import { useState } from "react";
-import InputField from "./InputField";
 
-const Register = ({ goToLogin }) => {
+import InputField from "./InputField";
+import LoginButton from "./LoginButton";
+
+const Register = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,42 +27,38 @@ const Register = ({ goToLogin }) => {
   };
 
   return (
-    <div className=" flex flex-col gap-6 items-center">
-      <InputField
-        placeholder="User Name"
-        inputText={userName}
-        setText={setUserName}
-        types="text"
-      />
-      <InputField
-        placeholder="Email"
-        inputText={email}
-        setText={setEmail}
-        types="email"
-      />
-      <InputField
-        placeholder="Password"
-        inputText={password}
-        setText={setPassword}
-        types="password"
-      />
-      <button
-        onClick={handleSubmit}
-        type=""
-        className="bg-green-400 w-20 p-1 rounded-full"
-      >
-        Submit
-      </button>
+    <div>
+      <div className="flex flex-col justify-end items-end mt-10 mr-11">
+        <LoginButton />
+      </div>
 
-      <button
-        onClick={() => {
-          goToLogin(true);
-        }}
-        type=""
-        className="bg-rose-400 w-20 p-1 rounded-full"
-      >
-        Login
-      </button>
+      <div className=" flex flex-col gap-6 items-center">
+        <InputField
+          placeholder="User Name"
+          inputText={userName}
+          setText={setUserName}
+          types="text"
+        />
+        <InputField
+          placeholder="Email"
+          inputText={email}
+          setText={setEmail}
+          types="email"
+        />
+        <InputField
+          placeholder="Password"
+          inputText={password}
+          setText={setPassword}
+          types="password"
+        />
+        <button
+          onClick={handleSubmit}
+          type=""
+          className="bg-green-400 w-20 p-1 rounded-full"
+        >
+          Register
+        </button>
+      </div>
     </div>
   );
 };

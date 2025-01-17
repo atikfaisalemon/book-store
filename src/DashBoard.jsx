@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function DashBoard() {
   const [response, setResponse] = useState("");
@@ -21,11 +21,12 @@ function DashBoard() {
     console.log("response", data.books);
   };
 
+  useEffect(() => {
+    getBooks();
+  }, []);
+
   return (
     <div>
-      <button className="bg-blue-400 p-1 rounded-full" onClick={getBooks}>
-        Get Books
-      </button>
       <ul className="flex gap-6 mt-6">
         {response.length > 0 ? (
           response.map((book) => (
@@ -39,7 +40,7 @@ function DashBoard() {
             </li>
           ))
         ) : (
-          <p>Click the button for ger book</p>
+          <p>Loading Books...</p>
         )}
       </ul>
     </div>

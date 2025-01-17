@@ -1,14 +1,11 @@
 import "./App.css";
-import Register from "./Register";
-import Login from "./Login";
-import { useState } from "react";
+import Index from "./Index";
 
 function App() {
-  const [isLoginForm, setIsLoginForm] = useState(false);
   return (
-    <div>
-      {isLoginForm ? <Login /> : <Register goToLogin={setIsLoginForm} />}
-    </div>
+    <>
+      <Index />
+    </>
   );
 }
 
