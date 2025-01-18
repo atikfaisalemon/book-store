@@ -1,7 +1,5 @@
-import React from "react";
-
 const About = () => {
-  return <div>About</div>;
+  return <div>{/* <WishListButton /> */}</div>;
 };
 
 export default About;

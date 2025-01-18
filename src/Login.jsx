@@ -21,10 +21,11 @@ function Login() {
 
     const data = await response.json();
     setResponse(data);
-
-    localStorage.setItem("token", data.token);
-    console.log("response", data);
-    navigate("/dashBoard");
+    if (data.token) {
+      localStorage.setItem("token", data.token);
+      console.log("response", data);
+      navigate("/dashBoard");
+    }
   };
 
   //   const handleSubmit = () => {

@@ -3,6 +3,8 @@ import Register from "./Register";
 import Login from "./Login";
 import DashBoard from "./DashBoard";
 import ProtectedRoute from "./ProtectedRoute";
+import About from "./About";
+import WishList from "./WishList";
 
 const Index = () => {
   return (
@@ -10,6 +12,9 @@ const Index = () => {
       <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/wishlist" element={<WishList />} />
+
         <Route
           path="/dashBoard"
           element={
