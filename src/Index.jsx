@@ -5,6 +5,7 @@ import DashBoard from "./DashBoard";
 import ProtectedRoute from "./ProtectedRoute";
 import About from "./About";
 import WishList from "./WishList";
+import CreateBook from "./CreateBook";
 
 const Index = () => {
   return (
@@ -13,7 +14,8 @@ const Index = () => {
         <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
-        <Route path="/wishlist" element={<WishList />} />
+        <Route path="/dashBoard/wishlist" element={<WishList />} />
+        <Route path="/create" element={<CreateBook />} />
 
         <Route
           path="/dashBoard"
