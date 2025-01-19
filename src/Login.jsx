@@ -24,7 +24,7 @@ function Login() {
     if (data.token) {
       localStorage.setItem("token", data.token);
       console.log("response", data);
-      navigate("/dashBoard");
+      navigate("/");
     }
   };
 
