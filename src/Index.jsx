@@ -6,6 +6,7 @@ import About from "./About";
 import WishList from "./WishList";
 import CreateBook from "./CreateBook";
 import NavBar from "./NavBar";
+import { BookDetails } from "./BookDetails";
 
 const Index = () => {
   return (
@@ -19,6 +20,8 @@ const Index = () => {
           <Route path="wishlist" element={<WishList />} />
           <Route index element={<DashBoard />} />
           <Route path="/create" element={<CreateBook />} />
+          <Route path="/dashboard" element={<DashBoard />} />
+          <Route path="/book/:id" element={<BookDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>
